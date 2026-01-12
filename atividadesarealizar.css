@@ -1,0 +1,89 @@
+/* ===============================
+   RESERVAS – CSS ISOLADO
+================================ */
+
+.reservas-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.reservas-page h1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+/* GRID PRINCIPAL */
+.reservas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+.reserva-card {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+/* HEADER */
+.reserva-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reserva-header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--primary);
+}
+
+/* DETALHES */
+.reserva-detalhe {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.reserva-detalhe ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+/* AVALIAÇÃO */
+.avaliacao {
+  border-top: 1px dashed var(--border);
+  padding-top: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.avaliacao h3 {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+}
+
+/* FORM LOCAL (sem conflito) */
+.reserva-card form {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.reserva-card textarea {
+  resize: vertical;
+}
+
+/* RESPONSIVO — RANGE SYNTAX */
+@media (width <= 600px) {
+  .reservas-page {
+    padding: 0 1rem;
+  }
+}

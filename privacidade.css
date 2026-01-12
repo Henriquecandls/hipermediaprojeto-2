@@ -1,0 +1,165 @@
+/* =====================
+   VARIÁVEIS & TEMAS
+===================== */
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --primary: #0ea5e9;
+  --secondary: #16a34a;
+  --card: #f1f5f9;
+  --border: #cbd5e1;
+  --input-bg: #f9fafb;
+  --hover-bg: #e0f2fe;
+}
+
+/* Tema escuro */
+html:has(#theme-toggle:checked) {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --primary: #38bdf8;
+  --secondary: #22c55e;
+  --card: #020617;
+  --border: #334155;
+  --input-bg: #1e293b;
+  --hover-bg: #1e40af33; /* leve destaque ao passar */
+}
+
+/* =====================
+   CORPO
+===================== */
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* =====================
+   SEÇÃO PRIVACIDADE
+===================== */
+.privacy {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: var(--card);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+}
+
+/* Título */
+.privacy h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+/* Formulário em grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: end;
+}
+
+/* Cada grupo de formulário */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Inputs e selects */
+.form-group input,
+.form-group select {
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--border);
+  background-color: var(--input-bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+/* Hover e foco */
+.form-group input:hover,
+.form-group select:hover {
+  background-color: var(--hover-bg);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 6px var(--primary);
+  background-color: var(--bg);
+}
+
+/* Botão de guardar */
+.form-actions {
+  grid-column: 1 / -1; /* ocupa toda a largura do grid */
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form-actions button {
+  font-family: inherit;
+  padding: 0.7rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* =====================
+   DETALHES VISUAIS
+===================== */
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-weight: 700;
+  padding: 0 0.5rem;
+  color: var(--primary);
+}
+
+/* =====================
+   RESPONSIVO
+===================== */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .privacy {
+    padding: 1.5rem;
+  }
+}

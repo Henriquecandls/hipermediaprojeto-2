@@ -1,0 +1,97 @@
+/* =====================
+   CARD DE NOTIFICAÇÃO
+===================== */
+.notification-card {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* TÍTULO */
+.notification-card h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+/* TEXTO NORMAL (NUNCA BOTÃO) */
+.notification-card p,
+.notification-card li,
+.notification-card span {
+  font-size: 0.95rem;
+  color: var(--text);
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* LISTAS */
+.notification-card ul {
+  padding-left: 1.2rem;
+  margin: 0.3rem 0;
+}
+
+.notification-card li {
+  list-style: disc;
+}
+
+/* =====================
+   DETAILS / SUMMARY
+===================== */
+.notification-card details {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  background: none; /* IMPORTANTE */
+}
+
+.notification-card summary {
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.notification-card summary::-webkit-details-marker {
+  display: none;
+}
+
+/* =====================
+   ÁREA DE AÇÕES (BOTÕES)
+===================== */
+.notification-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+/* BOTÕES – ISOLADOS */
+.notification-actions button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.notification-actions button:hover {
+  background-color: #0284c7;
+}
+
+/* GARANTE QUE TEXTO NÃO VIRA BOTÃO */
+.notification-card button * {
+  all: unset;
+}
+
+/* =====================
+   GRID
+===================== */
+.notifications {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.2rem;
+}

@@ -1,0 +1,107 @@
+/* =====================
+   PAGAMENTOS - NOTIFICAÇÕES
+===================== */
+
+.notifications-payments {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Cabeçalho */
+.section-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.section-header p {
+  opacity: 0.8;
+}
+
+/* Cartão */
+.payment-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+
+  padding: 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+}
+
+/* Estados */
+.payment-card.success {
+  border-left: 6px solid var(--secondary);
+}
+
+.payment-card.pending {
+  border-left: 6px solid var(--primary);
+}
+
+/* Info */
+.payment-info h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Ações */
+.payment-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+/* Botão recibo */
+.btn-receipt {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.btn-receipt:hover {
+  background-color: var(--card);
+}
+
+/* Botão pagar */
+.btn-pay {
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-pay:hover {
+  opacity: 0.9;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .payment-card {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+/* Estado de validação do utilizador */
+.payment-card::user-valid {
+  outline: 3px solid green;
+  border-left-color: green;
+}
+
+.payment-card::user-invalid {
+  outline: 3px solid red;
+  border-left-color: red;
+}

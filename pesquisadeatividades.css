@@ -1,0 +1,135 @@
+.activity-search {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.activity-search h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text);
+}
+
+/* =====================
+   FORMULÁRIO DE PESQUISA
+===================== */
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-form input {
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+  background: none; /* transparente para dark mode */
+}
+
+.search-form button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+  background-color: #0284c7;
+}
+
+/* =====================
+   CARDS DE ATIVIDADE
+===================== */
+.activity-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.activity-card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.0); /* transparente */
+}
+
+.activity-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.activity-info {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.activity-info h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.activity-info .highlight {
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.activity-info details {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(255,255,255,0.0);
+}
+
+.activity-info summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* =====================
+   BOTÃO FAVORITOS
+===================== */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.btn-fav {
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--secondary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-fav:hover {
+  background-color: #16a34a;
+}
+
+/* =====================
+   RESPONSIVO
+===================== */
+@media (max-width: 600px) {
+  .search-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

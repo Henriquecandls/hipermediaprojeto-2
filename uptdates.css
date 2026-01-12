@@ -1,0 +1,59 @@
+.updates-log {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.updates-log h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text);
+}
+
+/* =====================
+   CARDS DE UPDATE
+===================== */
+.updates-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.update-card {
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.0); /* transparente para dark mode */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.update-card summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.update-card details {
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+  border-left: 2px solid var(--border);
+}
+
+.update-card ul {
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+}
+
+.update-card li {
+  margin-bottom: 0.3rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .updates-log {
+    padding: 0.5rem;
+  }
+}

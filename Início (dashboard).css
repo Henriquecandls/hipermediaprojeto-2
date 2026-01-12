@@ -1,0 +1,200 @@
+/* =====================
+   VARIÁVEIS & TEMAS
+===================== */
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --primary: #0ea5e9;
+  --secondary: #16a34a;
+  --card: #f1f5f9;
+  --border: #cbd5e1;
+}
+
+html:has(#theme-toggle:checked) {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --primary: #38bdf8;
+  --secondary: #22c55e;
+  --card: #020617;
+  --border: #334155;
+}
+
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =====================
+   LAYOUT GRID
+===================== */
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (width <= 768px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+
+/* =====================
+   DASHBOARD / CARDS
+===================== */
+.search {
+  grid-column: 1 / -1;
+}
+
+.search input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+section {
+  grid-column: span 4;
+  background-color: var(--card);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+@media (width <= 768px) {
+  section {
+    grid-column: span 4;
+  }
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+/* =====================
+   DETAILS / SUMMARY
+===================== */
+details {
+  background: var(--bg);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* =====================
+   FORMULÁRIO PAGAMENTO
+===================== */
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+input:required:user-invalid {
+  border: 2px solid red;
+}
+
+input:required:user-valid {
+  border: 2px solid green;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+
+.resumo-reserva {
+  background-color: var(--card);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.resumo-reserva p {
+  margin: 0;
+}
+
+.resumo-reserva .valor {
+  font-weight: bold;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.reservado {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.pago {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.pendente {
+  background-color: var(--border);
+  color: var(--text);
+}
+
+/* Formulário mantém grid e estilo já existente */
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+form button {
+  padding: 0.75rem;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

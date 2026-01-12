@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-PT" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madeira Experiences</title>
+  <meta name="description" content="Marketplace de experiências turísticas na Madeira" />
+    <link rel="stylesheet" href="dadospessoais.css" />
+      <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+  <strong>🌴 MadeiraX</strong>
+
+<nav aria-label="Menu principal">
+    <ul class="menu">
+
+      <!-- INÍCIO -->
+      <li class="dropdown">
+        <a href="#">Início ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="Início (dashboard).html">Início Dashboard</a></li>
+        </ul>
+      </li>
+
+      <!-- GERAL -->
+      <li class="dropdown">
+        <a href="#">Geral ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="preferencias.html">Preferências</a></li>
+          <li><a href="dadospessoais.html">Dados Pessoais</a></li>
+          <li><a href="privacidade.html">Privacidade</a></li>
+          <li><a href="Ajuda.html">Ajuda</a></li>
+        </ul>
+      </li>
+
+      <!-- LUGARES PARA VER -->
+      <li class="dropdown">
+        <a href="#">Lugares para Ver ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="principaisatraçoes.html">Principais Atrações</a></li>
+          <li><a href="costanorte.html">Costa Norte</a></li>
+          <li><a href="costashul.html">Costa Sul</a></li>
+          <li><a href="portosanto.html">Porto Santo</a></li>
+          <li><a href="capital.html">Capital</a></li>
+        </ul>
+      </li>
+
+      <!-- COISAS PARA FAZER -->
+      <li class="dropdown">
+        <a href="#">Coisas para Fazer ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="melhoresexperencias.html">Melhores Experiências</a></li>
+          <li><a href="costanorte.html">Costa Norte</a></li>
+          <li><a href="costashul.html">Costa Sul</a></li>
+          <li><a href="portosanto.html">Porto Santo</a></li>
+          <li><a href="capital.html">Capital</a></li>
+        </ul>
+      </li>
+
+      <!-- INSPIRAÇÃO DE VIAGEM -->
+      <li class="dropdown">
+        <a href="#">Inspiração de Viagem ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="tedencias.html">Tendências</a></li>
+          <li><a href="melhoreslugaresavisitar.html">Melhores Lugares a Visitar</a></li>
+          <li><a href="festasearraias.html">Festas e Arraiais</a></li>
+          <li><a href="gastronomia.html">Gastronomia</a></li>
+          <li><a href="trilhoselevadas.html">Trilhos e Levadas</a></li>
+          <li><a href="natureza.html">Natureza</a></li>
+          <li><a href="cultura.html">Cultura</a></li>
+          <li><a href="desporto.html">Desportos</a></li>
+          <li><a href="guiacostanorte.html">Guia Costa Norte</a></li>
+          <li><a href="guiacostasul.html">Guia Costa Sul</a></li>
+          <li><a href="guiaportosanto.html">Guia Porto Santo</a></li>
+          <li><a href="guiadacapital.html">Guia da Capital</a></li>
+        </ul>
+      </li>
+
+      <!-- CARRINHO -->
+      <li class="dropdown">
+        <a href="#">Carrinho de Compras ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="listadeartigos.html">Lista de Artigos</a></li>
+          <li><a href="finalizarreservas.html">Finalizar Reservas</a></li>
+          <li><a href="favoritos.html">Favoritos</a></li>
+          <li><a href="pesquisadeatividades.html">Pesquisa de Atividades</a></li>
+        </ul>
+      </li>
+
+      <!-- NOTIFICAÇÕES -->
+      <li class="dropdown">
+        <a href="#">Notificações ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="uptdates.html">Updates</a></li>
+          <li><a href="atividades.html">Atividades</a></li>
+          <li><a href="pagamentos.html">Pagamentos</a></li>
+        </ul>
+      </li>
+
+      <!-- RESERVAS -->
+      <li class="dropdown">
+        <a href="#">Reservas ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="atividadesarealizar.html">Atividades a Realizar</a></li>
+          <li><a href="arquivodeatividade.html">Arquivo de Atividades</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="theme-switch-wrapper">
+  <label class="theme-switch">
+    <input type="checkbox" id="theme-toggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+</header>
+
+
+
+    <main>
+       <main class="dados-container">
+
+      <h1> Dados Pessoais</h1>
+
+      <!-- Informação Biográfica -->
+      <section class="bio">
+        <h2>Informação Biográfica</h2>
+        <div class="form-grid">
+          <label for="nome">Nome completo:</label>
+          <input type="text" id="nome" required>
+
+          <label for="nascimento">Data de nascimento:</label>
+          <input type="date" id="nascimento" required>
+
+          <label for="sexo">Sexo:</label>
+          <select id="sexo">
+            <option value="masc">Masculino</option>
+            <option value="fem">Feminino</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Morada -->
+      <section class="morada">
+        <h2>Morada</h2>
+        <div class="form-grid">
+          <label for="rua">Rua:</label>
+          <input type="text" id="rua" required>
+
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" required>
+
+          <label for="codigo">Código Postal:</label>
+          <input type="text" id="codigo" pattern="\d{4}-\d{3}" placeholder="1234-567">
+        </div>
+      </section>
+
+      <!-- Documentos de Identificação -->
+      <section class="documentos">
+        <h2>Documentos de Identificação</h2>
+        <details>
+          <summary>Cartão de Cidadão</summary>
+          <div class="form-grid">
+            <label for="cc-num">Número:</label>
+            <input type="text" id="cc-num" pattern="\d{8}[A-Z]{1}\d{2}" placeholder="12345678A12">
+
+            <label for="cc-valid">Validade:</label>
+            <input type="date" id="cc-valid">
+          </div>
+        </details>
+
+        <details>
+          <summary>Passaporte</summary>
+          <div class="form-grid">
+            <label for="pass-num">Número:</label>
+            <input type="text" id="pass-num">
+
+            <label for="pass-valid">Validade:</label>
+            <input type="date" id="pass-valid">
+          </div>
+        </details>
+      </section>
+
+      <!-- Contactos -->
+      <section class="contactos">
+        <h2>Contactos</h2>
+        <div class="form-grid">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" pattern="[0-9]{9}" placeholder="912345678">
+        </div>
+      </section>
+
+      <button type="submit"> Guardar Dados</button>
+    </main>
+
+    <footer>
+      <span>🌴 MadeiraX</span>
+      <nav aria-label="Menu rodapé">
+        <a href="Ajuda.html">Contactos</a>
+         <a href="404.html">erro</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

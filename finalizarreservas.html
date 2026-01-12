@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-PT" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madeira Experiences</title>
+  <meta name="description" content="Marketplace de experiências turísticas na Madeira" />
+    <link rel="stylesheet" href="finalizarreservas.css" />
+      <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+  <strong>🌴 MadeiraX</strong>
+
+<nav aria-label="Menu principal">
+    <ul class="menu">
+
+      <!-- INÍCIO -->
+      <li class="dropdown">
+        <a href="#">Início ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="Início (dashboard).html">Início Dashboard</a></li>
+        </ul>
+      </li>
+
+      <!-- GERAL -->
+      <li class="dropdown">
+        <a href="#">Geral ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="preferencias.html">Preferências</a></li>
+          <li><a href="dadospessoais.html">Dados Pessoais</a></li>
+          <li><a href="privacidade.html">Privacidade</a></li>
+          <li><a href="Ajuda.html">Ajuda</a></li>
+        </ul>
+      </li>
+
+      <!-- LUGARES PARA VER -->
+      <li class="dropdown">
+        <a href="#">Lugares para Ver ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="principaisatraçoes.html">Principais Atrações</a></li>
+          <li><a href="vercostanorte.html">Costa Norte</a></li>
+          <li><a href="vercostashul.html">Costa Sul</a></li>
+          <li><a href="verportosanto.html">Porto Santo</a></li>
+          <li><a href="vercapital.html">Capital</a></li>
+        </ul>
+      </li>
+
+      <!-- COISAS PARA FAZER -->
+      <li class="dropdown">
+        <a href="#">Coisas para Fazer ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="melhoresexperencias.html">Melhores Experiências</a></li>
+          <li><a href="costanorte.html">Costa Norte</a></li>
+          <li><a href="costasul.html">Costa Sul</a></li>
+          <li><a href="portosanto.html">Porto Santo</a></li>
+          <li><a href="capital.html">Capital</a></li>
+        </ul>
+      </li>
+
+      <!-- INSPIRAÇÃO DE VIAGEM -->
+      <li class="dropdown">
+        <a href="#">Inspiração de Viagem ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="tedencias.html">Tendências</a></li>
+          <li><a href="melhoreslugaresavisitar.html">Melhores Lugares a Visitar</a></li>
+          <li><a href="festasearraias.html">Festas e Arraiais</a></li>
+          <li><a href="gastronomia.html">Gastronomia</a></li>
+          <li><a href="trilhoselevadas.html">Trilhos e Levadas</a></li>
+          <li><a href="natureza.html">Natureza</a></li>
+          <li><a href="cultura.html">Cultura</a></li>
+          <li><a href="desporto.html">Desportos</a></li>
+          <li><a href="guiacostanorte.html">Guia Costa Norte</a></li>
+          <li><a href="guiacostasul.html">Guia Costa Sul</a></li>
+          <li><a href="guiaportosanto.html">Guia Porto Santo</a></li>
+          <li><a href="guiadacapital.html">Guia da Capital</a></li>
+        </ul>
+      </li>
+
+      <!-- CARRINHO -->
+      <li class="dropdown">
+        <a href="#">Carrinho de Compras ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="listadeartigos.html">Lista de Artigos</a></li>
+          <li><a href="finalizarreservas.html">Finalizar Reservas</a></li>
+          <li><a href="favoritos.html">Favoritos</a></li>
+          <li><a href="pesquisadeatividades.html">Pesquisa de Atividades</a></li>
+        </ul>
+      </li>
+
+      <!-- NOTIFICAÇÕES -->
+      <li class="dropdown">
+        <a href="#">Notificações ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="uptdates.html">Updates</a></li>
+          <li><a href="atividades.html">Atividades</a></li>
+          <li><a href="pagamentos.html">Pagamentos</a></li>
+        </ul>
+      </li>
+
+      <!-- RESERVAS -->
+      <li class="dropdown">
+        <a href="#">Reservas ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="atividadesarealizar.html">Atividades a Realizar</a></li>
+          <li><a href="arquivodeatividade.html">Arquivo de Atividades</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="theme-switch-wrapper">
+  <label class="theme-switch">
+    <input type="checkbox" id="theme-toggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+</header>
+<main class="checkout" role="main">
+  <h1 id="checkout-title">💳 Finalizar Reserva</h1>
+
+  <section class="checkout-grid">
+
+    <!-- Resumo do Carrinho -->
+    <div class="cart-summary" role="region" aria-labelledby="checkout-title">
+      <h2>Resumo da Reserva</h2>
+      <ul>
+        <li>Praia de Porto Santo – 1x – 25€</li>
+        <li>Casa-Museu Cristóvão Colombo – 2x – 30€</li>
+        <li>Museu do Cardina – 1x – 10€</li>
+      </ul>
+      <p class="total-items"><strong>Total de itens:</strong> 4</p>
+      <p class="total-price"><strong>Total a pagar:</strong> 65€</p>
+    </div>
+
+    <!-- Dados de Pagamento -->
+    <form class="payment-form" aria-labelledby="checkout-title">
+      <h2>Dados de Pagamento</h2>
+
+      <label for="card-name">Nome no Cartão</label>
+      <input type="text" id="card-name" name="card-name" placeholder="Nome completo" required>
+
+      <label for="card-number">Número do Cartão</label>
+      <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000" required pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}">
+
+      <div class="card-details">
+        <div>
+          <label for="expiry">Validade</label>
+          <input type="text" id="expiry" name="expiry" placeholder="MM/AA" required pattern="\d{2}/\d{2}">
+        </div>
+        <div>
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" placeholder="123" required pattern="\d{3}">
+        </div>
+      </div>
+
+      <details>
+        <summary>Informações adicionais</summary>
+        <p>Certifique-se de que os dados do cartão estão corretos antes de submeter.</p>
+      </details>
+
+      <button type="submit" class="btn-finalize">✅ Finalizar Reserva</button>
+     
+    </form>
+  </section>
+</main>
+
+
+
+ 
+
+    <footer>
+      <span>🌴 MadeiraX</span>
+      <nav aria-label="Menu rodapé">
+        <a href="Ajuda ">Contactos</a>
+         <a href="404.html">erro</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

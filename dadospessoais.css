@@ -1,0 +1,195 @@
+/* =====================
+   VARIÁVEIS & TEMAS
+===================== */
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --primary: #0ea5e9;
+  --secondary: #16a34a;
+  --card: #f1f5f9;
+  --border: #cbd5e1;
+}
+
+html:has(#theme-toggle:checked) {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --primary: #38bdf8;
+  --secondary: #22c55e;
+  --card: #020617;
+  --border: #334155;
+}
+
+/* =====================
+   FONTES & GLOBAL
+===================== */
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* =====================
+   CONTAINER PRINCIPAL
+===================== */
+.dados-container {
+  max-width: 900px;
+  width: 95%;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* =====================
+   SEÇÕES
+===================== */
+section {
+  background-color: var(--card);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* =====================
+   FORM GRID INTERNO
+===================== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* lado a lado */
+  gap: 1rem 2rem; /* espaço entre linhas e colunas */
+}
+
+.form-grid label {
+  margin-bottom: 0.4rem;
+}
+
+input, select {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 4px var(--primary);
+}
+
+/* =====================
+   BOTÃO CENTRALIZADO
+===================== */
+button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;        /* ocupa linha inteira */
+  max-width: 300px;   /* largura máxima */
+  justify-self: center;
+  margin: 1rem auto 0 auto; /* centraliza abaixo do formulário */
+}
+
+button:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+/* =====================
+   DETAILS / SUMMARY
+===================== */
+details {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* =====================
+   ACESSIBILIDADE
+===================== */
+input, select, button {
+  font-size: 1rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+/* =====================
+   ANIMAÇÃO HEADER
+===================== */
+header strong {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+header strong:hover {
+  transform: scale(1.1) rotate(-2deg);
+}

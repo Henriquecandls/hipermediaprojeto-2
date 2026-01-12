@@ -1,0 +1,132 @@
+/* =====================
+   VARIÁVEIS & TEMAS
+===================== */
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --primary: #0ea5e9;
+  --secondary: #16a34a;
+  --card: #f1f5f9;
+  --border: #cbd5e1;
+}
+
+/* Tema escuro (Chrome / Edge) */
+html:has(#theme-toggle:checked) {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --primary: #38bdf8;
+  --secondary: #22c55e;
+  --card: #020617;
+  --border: #334155;
+}
+
+/* =====================
+   FONTE GLOBAL
+   (igual ao início)
+===================== */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Oxygen, Ubuntu,
+               Cantarell, "Open Sans", "Helvetica Neue",
+               sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* =====================
+   ELEMENTOS GERAIS
+===================== */
+label {
+  font-weight: 600;
+}
+
+select {
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 4px var(--primary);
+}
+
+button {
+  font-family: inherit;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background-color: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* =====================
+   SECÇÃO PREFERÊNCIAS
+===================== */
+.preferences {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Título */
+.preferences h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* =====================
+   FORMULÁRIO
+===================== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  margin-bottom: 0.4rem;
+}
+
+/* =====================
+   MENU (para não ficar roxo)
+===================== */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: var(--primary);
+}
+.preferences {
+  max-width: 1000px;   /* ← mais largo */
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem;
+}

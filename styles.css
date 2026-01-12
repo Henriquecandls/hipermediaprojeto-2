@@ -1,0 +1,206 @@
+/* =====================
+   FOOTER
+===================== */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+html, body {
+  height: 100%;
+}
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+   DROPDOWN MENU (HOVER)
+===================== */
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  min-width: 220px;
+  padding: 0.5rem 0;
+  display: none;
+  z-index: 2000;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  padding: 0.6rem 1rem;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* MOSTRAR AO PASSAR O RATO */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* =====================
+   DETAILS / SUMMARY
+===================== */
+details {
+  background: var(--bg);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+/* =====================
+   HEADER
+===================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+/* =====================
+   TOGGLE SWITCH
+===================== */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto; 
+}
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Quando está checked */
+.theme-switch input:checked + .slider {
+  background-color: #0ea5e9; /* cor do toggle ligado */
+}
+
+.theme-switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+html:has(#theme-toggle:checked) {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --primary: #38bdf8;
+  --secondary: #22c55e;
+  --card: #020617;
+  --border: #334155;
+}
+/* ===== PREFERÊNCIAS ===== */
+select {
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+label {
+  font-weight: 600;
+}
+
+form button {
+  margin-top: 0.5rem;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --primary: #0ea5e9;
+  --secondary: #16a34a;
+  --card: #f1f5f9;
+  --border: #cbd5e1;
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}

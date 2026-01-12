@@ -1,0 +1,149 @@
+/* =====================
+   PRINCIPAIS ATRAÇÕES
+===================== */
+.attractions {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.attractions h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* =====================
+   PESQUISA
+===================== */
+.search {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.search input {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  margin-top: 0.5rem;
+}
+
+/* =====================
+   LISTA DE ATRAÇÕES
+===================== */
+.attractions-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.attraction-card {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px);
+}
+
+.attraction-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.attraction-info {
+  padding: 1rem;
+}
+
+.attraction-info h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.highlight {
+  color: #ef4444;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* =====================
+   DETALHES / SUMMARY
+===================== */
+.attraction-info details {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background-color: var(--card);
+}
+
+.attraction-info summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.attraction-info summary:hover {
+  color: var(--primary);
+}
+
+/* =====================
+   AÇÕES
+===================== */
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.actions button {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-buy {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-buy:hover {
+  background-color: #0284c7;
+}
+
+.btn-fav {
+  background-color: #f87171;
+  color: #fff;
+}
+
+.btn-fav:hover {
+  background-color: #ef4444;
+}
+
+/* =====================
+   RESPONSIVO
+===================== */
+@media (max-width: 900px) {
+  .attractions-list {
+    grid-template-columns: 1fr;
+  }
+}

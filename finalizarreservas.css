@@ -1,0 +1,161 @@
+/* === Checkout / Finalizar Reservas - Tamanho médio === */
+.checkout {
+  max-width: 1200px; /* largura moderada */
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.checkout h1 {
+  text-align: center;
+  color: #1e40af;
+  font-size: 2.2rem; /* tamanho equilibrado */
+  margin-bottom: 1.8rem;
+  border-bottom: 3px solid #1e40af;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+/* === Grid Layout Principal com subgrid === */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* carrinho maior que o formulário */
+  gap: 2rem;
+  align-items: start;
+}
+
+.cart-summary,
+.payment-form {
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  padding: 1.8rem;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cart-summary:hover,
+.payment-form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Cart Summary */
+.cart-summary h2,
+.payment-form h2 {
+  font-size: 1.8rem;
+  color: #1e40af;
+  margin-bottom: 1.2rem;
+}
+
+.cart-summary ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+.cart-summary li {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  margin-bottom: 0.6rem;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.total-items,
+.total-price {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-top: 1rem;
+}
+
+/* === Formulário de Pagamento === */
+.payment-form label {
+  display: block;
+  margin: 0.6rem 0 0.3rem;
+  font-weight: 600;
+}
+
+.payment-form input {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.payment-form input:focus-visible {
+  border-color: #1e40af;
+  box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.3);
+  outline: none;
+}
+
+.payment-form input:valid {
+  border-color: #16a34a;
+}
+.payment-form input:invalid {
+  border-color: #dc2626;
+}
+
+/* Campos lado a lado */
+.card-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Botão finalizar */
+.btn-finalize {
+  width: 100%;
+  padding: 1rem;
+  background-color: #1e40af;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.btn-finalize:hover,
+.btn-finalize:focus-visible {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  outline: 2px solid #2563eb;
+}
+
+/* Details/Summary styling */
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #f1f5f9;
+}
+details[open] summary {
+  background-color: #e0f2fe;
+  color: #1e40af;
+}
+
+/* === Media Queries com range syntax === */
+@media (width <= 900px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width >= 901px) and (width <= 1200px) {
+  .checkout-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}

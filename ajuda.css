@@ -1,0 +1,140 @@
+/* =====================
+   VARIÁVEIS & TEMAS
+===================== */
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --primary: #0ea5e9;
+  --secondary: #16a34a;
+  --card: #f1f5f9;
+  --border: #cbd5e1;
+}
+
+html:has(#theme-toggle:checked) {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --primary: #38bdf8;
+  --secondary: #22c55e;
+  --card: #020617;
+  --border: #334155;
+}
+/* =====================
+   AJUDA - MAIN
+===================== */
+.help {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.help h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.help section {
+  margin-bottom: 2rem;
+}
+
+.help h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+/* =====================
+   CONTACTOS LISTA
+===================== */
+.contacts ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.contacts a {
+  color: var(--primary);
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   FORMULÁRIO CONTACTO DIRETO
+===================== */
+.direct-contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.direct-contact .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.direct-contact textarea {
+  grid-column: 1 / -1; /* textarea ocupa toda largura */
+  resize: vertical;
+}
+
+.direct-contact button {
+  grid-column: 1 / -1;
+  padding: 0.8rem 1.2rem;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.direct-contact button:hover {
+  background-color: #0284c7;
+}
+
+/* =====================
+   FAQ INTERATIVO
+===================== */
+.faq details {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background-color: var(--bg);
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq summary:hover {
+  color: var(--primary);
+}
+
+.faq details[open] {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* =====================
+   RESPONSIVO
+===================== */
+@media (max-width: 600px) {
+  .direct-contact form {
+    grid-template-columns: 1fr;
+  }
+}
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
